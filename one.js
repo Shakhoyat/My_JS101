@@ -20,3 +20,7 @@ console.log(`you like ${favFood}`);
 let onlinestatus=true;
 console.log(onlinestatus);
 console.log(typeof onlinestatus);
+
+let for_sale=false;
+console.log(`Is this car for sale : ${for_sale}`);
+
