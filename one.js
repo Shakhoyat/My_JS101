@@ -1,13 +1,15 @@
-//Type conversion
+//const 
 
-let x="pizza";
-let y="pizza";
-let z="";
+const PI=3.14159;
+let radius;
+let circumference;
 
-x=Number(x);
-y=String(y);
-z=Boolean(z);
+// radius=window.prompt("Enter the radius of the circle");
+// console.log(`The circumference is : `+circumference);
 
-console.log(x,typeof x);
-console.log(y,typeof y);
-console.log(z,typeof z);
+document.getElementById("mySubmit").onclick=function(){
+   radius=document.getElementById("radd").value;
+   radius=Number(radius);
+   circumference=2*PI*radius;
+   document.getElementById("myH3").textContent=`The circumference is : ${circumference} cm`;
+};
