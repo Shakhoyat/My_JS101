@@ -1,5 +1,25 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
-    /* font-size: 3em; */
-    /* 2em=200% */
+#counterLabel{
+   display: block;
+   text-align: center;
+    font-size: 10em;
+    font-family: Poppins;
+}
+#btnContainer{
+    text-align: center;
+
+}
+.btns{
+    font-size: 2em;
+    font-family: Poppins;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(12, 90, 121);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btns:hover{
+    background-color: rgb(17, 19, 20);
 }

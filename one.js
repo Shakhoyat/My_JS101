@@ -1,15 +1,23 @@
-//const 
+//counter program
 
-const PI=3.14159;
-let radius;
-let circumference;
+const decrementButton = document.getElementById('decrementButton');
+const incrementButton = document.getElementById('incrementButton');
+const resetButton = document.getElementById('resetButton');
+const counterLabel = document.getElementById('counterLabel');
 
-// radius=window.prompt("Enter the radius of the circle");
-// console.log(`The circumference is : `+circumference);
+let counter = 0;
 
-document.getElementById("mySubmit").onclick=function(){
-   radius=document.getElementById("radd").value;
-   radius=Number(radius);
-   circumference=2*PI*radius;
-   document.getElementById("myH3").textContent=`The circumference is : ${circumference} cm`;
+incrementButton.onclick = () => {
+counter++;
+counterLabel.textContent = counter;
+
+};
+decrementButton.onclick = () => {
+   counter--;
+counterLabel.textContent = counter;
+};
+resetButton.onclick = () => {
+
+   counter=0;
+counterLabel.textContent = counter;
 };
