@@ -11,3 +11,12 @@ console.log(`The price is ${price}`);
 console.log(`You are a ${age} year old boy, ${name}`);
 
 console.log(name);
+
+console.log(typeof name);
+
+let favFood="Pizza";
+console.log(`you like ${favFood}`);
+
+let onlinestatus=true;
+console.log(onlinestatus);
+console.log(typeof onlinestatus);
