@@ -1,7 +1,5 @@
-// console.log(`HELLOOOOOOOO!!!!`);
-// console.log(`I like Mangoes`);
+//declaration of variable
+let a = 10;
+a=150;
 
-// // window.alert(`I am an alert box!`);
-// window.alert(`I am an alert pizza!`);
-document.getElementById("my_h1").textContent=`I am a changed h1!`;
-document.getElementById("my_p").textContent=`I am a changed p!`;
+console.log(a);
