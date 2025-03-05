@@ -18,6 +18,8 @@ let extra_students=students%2;
 console.log(extra_students);
 
 
+
+// augmented operators
 students+=10;
 students-=5;
 students*=2;
