@@ -1,17 +1,10 @@
-//random number generator
+//if else statement
 
-const mybtn = document.getElementById('mybtn');
-const mylbl = document.getElementById('mylbl');
-
-const min=1;
-const max=6;
-
-let randomNumber ;
-
-mybtn.onclick= function(){
-    randomNumber = Math.floor(Math.random()*(max-min+1)+min);
-    mylbl.textContent = randomNumber;
+let age = prompt("Please enter your age:");
+age = parseInt(age);
+if (age >= 18) {
+  console.log("You are eligible to vote");
 }
-
-
-
+else {
+  console.log("You are not eligible to vote");
+}
