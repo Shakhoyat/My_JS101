@@ -1,4 +1,8 @@
 //random number generator
 
-let randomNumber = Math.floor(Math.random()*6)+1;
+const min=50;
+const max=100;
+
+let randomNumber = Math.floor(Math.random()*(max-min+1))+min;
 console.log(randomNumber);
+
