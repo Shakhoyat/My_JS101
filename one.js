@@ -9,10 +9,9 @@ console.log(Math.LN2);
 console.log(Math.LN10);
 console.log(Math.LOG2E);
 
-let x=3.21
-console.log(Math.round(x));
-console.log(Math.floor(x));
-console.log(Math.ceil(x));
-console.log(Math.trunc(x));
-console.log(Math.random());
+let x=45
+
 console.log(Math.pow(2,3));
+let z=Math.log(x);
+console.log(z);
+console.log(Math.tan(x));
