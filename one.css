@@ -1,25 +1,17 @@
-#counterLabel{
-   display: block;
-   text-align: center;
-    font-size: 10em;
-    font-family: Poppins;
-}
-#btnContainer{
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-
 }
-.btns{
-    font-size: 2em;
-    font-family: Poppins;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+#mybtn{
+    background-color: #4CAF50;
     color: white;
-    background-color: rgb(12, 90, 121);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 3em;
 }
-.btns:hover{
-    background-color: rgb(17, 19, 20);
+#mylbl{
+    font-size: 3em;
 }

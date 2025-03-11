@@ -1,8 +1,17 @@
 //random number generator
 
-const min=50;
-const max=100;
+const mybtn = document.getElementById('mybtn');
+const mylbl = document.getElementById('mylbl');
 
-let randomNumber = Math.floor(Math.random()*(max-min+1))+min;
-console.log(randomNumber);
+const min=1;
+const max=6;
+
+let randomNumber ;
+
+mybtn.onclick= function(){
+    randomNumber = Math.floor(Math.random()*(max-min+1)+min);
+    mylbl.textContent = randomNumber;
+}
+
+
 
