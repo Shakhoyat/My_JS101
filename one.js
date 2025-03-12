@@ -1,20 +1,17 @@
-//string slicing
+//Method chaining
 
-const fullName = "Johnypapa Doe";
+let username=window.prompt("Enter your name :  ");
 
-// const firstName = fullName.slice(0, 4);// 0 is inclusive and 4 is exclusive
-// console.log(firstName); // John
+username=username.trim();
 
-// const lastName = fullName.slice(5);// 5 is inclusive
-// console.log(lastName); // Doe  
+let l1=username.charAt(0).toUpperCase();
 
-// let firstchar=fullName.slice(0,1);
-// let lastchar=fullName.slice(-1);
-// console.log(firstchar);
-// console.log(lastchar);
+let extraChars=username.slice(1).toLowerCase();
 
-let firstname=fullName.slice(0,fullName.indexOf(" "));
-let lastname=fullName.slice(fullName.lastIndexOf(" ")+1);
+username=l1+extraChars;
+console.log(username);
 
-console.log(firstname);
-console.log(lastname);
+
+//using method chaining
+username=username.trim().charAt(0).toUpperCase()+username.slice(1).toLowerCase();
+console.log(username);
