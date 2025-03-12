@@ -1,29 +1,37 @@
-//switch
-let day = 2;
-switch (day) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:    
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("Wednesday");
-    break;
-  case 4:
-    console.log("Thursday");
-    break;
-  case 5:    
-    console.log("Friday");
-    break;
-  case 6:
-    console.log("Saturday");
-    break;
-  case 7:
-    console.log("Sunday");
-    break;
-  default:
-    console.log("Invalid day");
-    break;
+//string methods
+
+let username="Shujon   ";
+
+console.log(username.charAt(0));
+console.log(username.length);
+username = username.toUpperCase();
+console.log(username);
+username = username.toLowerCase();
+
+console.log(username);
+
+//trim= remove extra whitespace from the string
+username=  username.trim();
+console.log(username);
+username = username.replace("shujon","shujon khan ");
+console.log(username);
+username = username.repeat(3);
+console.log(username);
+
+let result= username.split(" ");
+console.log(result);
+console.log(result[0]);
+console.log(result[1]);
+
+let res= username.startsWith("shujon");
+console.log(res);
+if(res){
+    console.log("yes"); }
+else{
+    console.log("no");
 }
-//output: Tuesday
+let phonenum="123-456-7890";
+phonenum= phonenum.replace(/-/g,"");
+console.log(phonenum);
+phonenum= phonenum.padStart(15,"0");
+console.log(phonenum);
