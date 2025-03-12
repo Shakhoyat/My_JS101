@@ -1,37 +1,13 @@
-//string methods
+//string slicing
 
-let username="Shujon   ";
+const fullName = "John Doe";
+const firstName = fullName.slice(0, 4);// 0 is inclusive and 4 is exclusive
+console.log(firstName); // John
 
-console.log(username.charAt(0));
-console.log(username.length);
-username = username.toUpperCase();
-console.log(username);
-username = username.toLowerCase();
+const lastName = fullName.slice(5);// 5 is inclusive
+console.log(lastName); // Doe  
 
-console.log(username);
-
-//trim= remove extra whitespace from the string
-username=  username.trim();
-console.log(username);
-username = username.replace("shujon","shujon khan ");
-console.log(username);
-username = username.repeat(3);
-console.log(username);
-
-let result= username.split(" ");
-console.log(result);
-console.log(result[0]);
-console.log(result[1]);
-
-let res= username.startsWith("shujon");
-console.log(res);
-if(res){
-    console.log("yes"); }
-else{
-    console.log("no");
-}
-let phonenum="123-456-7890";
-phonenum= phonenum.replace(/-/g,"");
-console.log(phonenum);
-phonenum= phonenum.padStart(15,"0");
-console.log(phonenum);
+let firstchar=fullName.slice(0,1);
+let lastchar=fullName.slice(-1);
+console.log(firstchar);
+console.log(lastchar);
