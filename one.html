@@ -10,8 +10,20 @@
 
 <body>
 
+    <form>
+        <h1>Temperature Conversion</h1>
+        <input type="number" id="textbox" value="0"><br>
+        <br>
+        <input type="radio" id="toFarenheit" name="unit">
+        <label for="toFarenheit">celsius to Farenheit</label><br>
+        <br>
+        <input type="radio" id="tocelsius" name="unit">
+        <label for="tocelsius">Farenheit to celsius </label><br>
+        <br>
+        <button type="btn" onclick="convert()">submit</button>
 
-
+        <p id="result">Select a unit</p>
+    </form>
     <script src=" one.js"></script>
 </body>
 
