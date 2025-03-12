@@ -11,13 +11,26 @@
 <body>
 
 
-    <label id="mylbl">Enter your age please...</label>
+    <input type="checkbox" id="toggle">
+    <label for="toggle">Subscribe</label>
+    <br><br>
+    <input type="radio" id="visabtn" name="payment">
+    <label for="visabtn">Visa</label>
     <br>
-    <input id="myip" type="text">
+    <input type="radio" id="paypalbtn" name="payment">
+    <label for="paypalbtn">paypal</label>
     <br>
-    <button type="submit" id="mybtn">Submit</button>
-    <p id="resultElement"></p>
-    <script src="one.js"></script>
+    <input type="radio" id="masterbtn" name="payment">
+    <label for="masterbtn">mastercard</label>
+    <br><br>
+
+    <button type="submit" id="mysub">Submit</button>
+
+    <p id="subres"></p>
+    <p id="paymentres"></p>
+
+
+    <script src=" one.js"></script>
 </body>
 
 </html>

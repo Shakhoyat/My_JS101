@@ -1,17 +1,9 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
+    text-align: left;
 }
-#mybtn{
-    background-color: #4CAF50;
+#mysub{
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    font-size: 3em;
-}
-#mylbl{
-    font-size: 3em;
+    background-color: black;
+    font-size: 2em;
 }

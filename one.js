@@ -1,19 +1,26 @@
-//if else statement
+//checkbox &radiobutton
+const mycheckbox = document.getElementById('toggle');
+const visabtn = document.getElementById('visabtn');
+const paypalbtn = document.getElementById('paypalbtn');
+const masterbtn = document.getElementById('masterbtn');
+const mysub = document.getElementById('mysub');
+const subres = document.getElementById('subres');
+const paymentres = document.getElementById('paymentres');
 
-const myip=document.getElementById('myip');
-const mybtn=document.getElementById('mybtn');
-const mylbl=document.getElementById('mylbl');
-const resultElement=document.getElementById('resultElement');
 
-let age;
+mysub.onclick = function () {
+    if (mycheckbox.checked) {
+        subres.textContent = `You're Subscribed`;
+    } else {
+        subres.innerHTML = `You're not Subscribed`;
+    }
 
-mybtn.onclick=function(){
-
-   age=Number(myip.value);
-   if(age>=18){
-       resultElement.textContent="You are eligible to vote";
-   }
-   else{
-       resultElement.textContent="You are not eligible to vote";
-   }
+    if(visabtn.checked){
+        paymentres.textContent = `You've selected Visa`;}
+    else if(paypalbtn.checked){
+        paymentres.textContent = `You've selected Paypal`;}
+    else if(masterbtn.checked){
+        paymentres.textContent = `You've selected Mastercard`;}
+    else{
+    paymentres.textContent = `You've not selected any payment method`;}
 }
