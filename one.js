@@ -1,22 +1,18 @@
-//for each() method
+let fruits = ["apple", "banana", "orange"];
 
-let arr = [1, 2, 3, 4, 5];
-arr.forEach(double);
-arr.forEach(square);
-arr.forEach(display); //array.forEach(callbackFunction) means element ,index ,array are provided
-
-function double(item, index, array) {
-  array[index] = item * 2;
+function upperCaseFruit(fruit, index, fruits) {
+  fruits[index] = fruit.toUpperCase();
 }
 
-function triple(item, index, array) {
-  array[index] = item * 3;
+function lowerCaseFruit(fruit, index, fruits) {
+  fruits[index] = fruit.toLowerCase();
 }
 
-function square(item, index, array) {
-  array[index] = item * item;
+function capitalize1stLetter(fruit, index, fruits) {
+  fruits[index] = fruit.charAt(0).toUpperCase() + fruit.slice(1);
 }
-
-function display(item) {
-  console.log(item);
+function display(fruit) {
+  console.log(fruit);
 }
+fruits.forEach(capitalize1stLetter);
+fruits.forEach(display);
