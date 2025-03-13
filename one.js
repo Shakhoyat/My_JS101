@@ -1,47 +1,23 @@
-//rest parameters in js
+function sum(...numbers) {
+  let result = 0;
 
-//rest is opposite of spread operator
-//spread operator is used to spread the elements of an array or object
-//rest is used to collect multiple elements and put them into a single array
-
-// const food1 = "pizza";
-// const food2 = "burger";
-// const food3 = "icecream";
-
-// //if we want to collect all the food items in a single array
-// function collectFoods(...foods) {
-//   console.log(...foods);
-// }
-// collectFoods(food1, food2, food3);
-
-const food1 = "pizza";
-const food2 = "burger";
-const food3 = "icecream";
-const food4 = "chocolate";
-const food5 = "cake";
-const food6 = "donut";
-const food7 = "pasta";
-const food8 = "noodles";
-const food9 = "sandwich";
-function openfridge(...foods) {
-  console.log(...foods);
+  for (let number of numbers) {
+    result += number;
+  }
+  return result;
 }
-openfridge(food1, food2, food3, food4, food5, food6, food7, food8, food9);
-//output: pizza burger icecream chocolate cake donut pasta noodles sandwich
-//all the food items are collected in a single array
-function getfood(...foods) {
-  return foods;
+
+const total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+console.log(`The total is ${total}`); // The total is 55
+function getAvg(...numbers) {
+  let result = 0;
+
+  for (let number of numbers) {
+    result += number;
+  }
+  return result / numbers.length;
 }
-const foods = getfood(
-  food1,
-  food2,
-  food3,
-  food4,
-  food5,
-  food6,
-  food7,
-  food8,
-  food9
-);
-console.log(foods);
-//output: ["pizza", "burger", "icecream", "chocolate", "cake", "donut", "pasta", "noodles", "sandwich"]
+
+const avg = getAvg(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(`The average is ${avg}`); // The average is 5.5
