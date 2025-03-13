@@ -1,21 +1,39 @@
-const textBox = document.getElementById("textbox");
-const tocelsius = document.getElementById("tocelsius");
-const toFarenheit = document.getElementById("toFarenheit");
-const result = document.getElementById("result");
-// const textBox = document.getElementById("textbox");
+//array
+let fruits = ["apple", "banana", "mango"];
 
-let temp;
+console.log(fruits[1]); // banana
+console.log(fruits[2]); // mango
+console.log(fruits[3]); // undefined
 
-function convert() {
-  if (tocelsius.checked) {
-    temp = Number(textBox.value);
-    temp = ((temp - 32) * 5) / 9;
-    result.textContent = temp.toFixed(2) + ` Celsius`;
-  } else if (toFarenheit.checked) {
-    temp = Number(textBox.value);
-    temp = (temp * 9) / 5 + 32;
-    result.textContent = temp.toFixed(2) + ` Farenheit`;
-  } else {
-    result.textContent = "Please select a conversion type";
-  }
+fruits[1] = "kiwi";
+console.log(fruits[1]); // kiwi
+fruits.push("orange");
+console.log(fruits[3]); // orange
+console.log(fruits.length); // 4
+console.log(fruits); // ["apple", "kiwi", "mango", "orange"]
+
+fruits.pop();
+console.log(fruits.length); // 3
+console.log(fruits); // ["apple", "kiwi", "mango"]
+
+fruits.unshift("orange"); // add to the beginning
+console.log(fruits.length); // 4
+console.log(fruits); // ["orange", "apple", "kiwi", "mango"]
+
+fruits.shift(); // remove from the beginning
+console.log(fruits.length); // 3
+console.log(fruits); // ["apple", "kiwi", "mango"]
+
+let n = fruits.length;
+console.log(n); // 3
+
+let idx = fruits.indexOf("banana");
+console.log(idx); // -1
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+console.log("advanced shortcut for loop :");
+for (let fruit of fruits) {
+  console.log(fruit);
 }
