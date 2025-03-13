@@ -1,29 +1,14 @@
-function sum(...numbers) {
-  let result = 0;
+//callback is a function that is passed as an argument to another function and is executed after some operation has been completed
 
-  for (let number of numbers) {
-    result += number;
-  }
-  return result;
+function hello(callback) {
+  console.log("This is hello");
+  callback();
 }
-
-const total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-console.log(`The total is ${total}`); // The total is 55
-function getAvg(...numbers) {
-  let result = 0;
-
-  for (let number of numbers) {
-    result += number;
-  }
-  return result / numbers.length;
+function goodbye() {
+  console.log("This is goodbye");
 }
-
-const avg = getAvg(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-console.log(`The average is ${avg}`); // The average is 5.5
-
-function combineStrings(...strings) {
-  return strings.join(" ");
+function leave() {
+  console.log("leave!!!");
 }
-const fullname = combineStrings("John", "Doe");
-console.log(`The full name is ${fullname}`); // The full name is John Doe
+// hello(goodbye);
+hello(leave);
