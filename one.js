@@ -1,39 +1,20 @@
-//array
-let fruits = ["apple", "banana", "mango"];
+//spread operator is used to copy the object and not the reference
 
-console.log(fruits[1]); // banana
-console.log(fruits[2]); // mango
-console.log(fruits[3]); // undefined
+let numbers = [10, -2, 3, 4];
 
-fruits[1] = "kiwi";
-console.log(fruits[1]); // kiwi
-fruits.push("orange");
-console.log(fruits[3]); // orange
-console.log(fruits.length); // 4
-console.log(fruits); // ["apple", "kiwi", "mango", "orange"]
+let maxi = Math.max(...numbers);
+let mini = Math.min(...numbers);
+console.log(maxi);
+console.log(mini);
 
-fruits.pop();
-console.log(fruits.length); // 3
-console.log(fruits); // ["apple", "kiwi", "mango"]
+let user = "John";
+let user2 = [...user].join("-");
+console.log(user2);
 
-fruits.unshift("orange"); // add to the beginning
-console.log(fruits.length); // 4
-console.log(fruits); // ["orange", "apple", "kiwi", "mango"]
+let fruits = ["Apple", "Banana", "Orange"];
+let vegetables = ["Carrot", "Potato", "Cabbage"];
+//shallo copy means it will copy the references in a different data structure
 
-fruits.shift(); // remove from the beginning
-console.log(fruits.length); // 3
-console.log(fruits); // ["apple", "kiwi", "mango"]
+let foods = [...fruits, ...vegetables, "eggs", "milk"];
 
-let n = fruits.length;
-console.log(n); // 3
-
-let idx = fruits.indexOf("banana");
-console.log(idx); // -1
-
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
-}
-console.log("advanced shortcut for loop :");
-for (let fruit of fruits) {
-  console.log(fruit);
-}
+console.log(foods);
