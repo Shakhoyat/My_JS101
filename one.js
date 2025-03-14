@@ -1,15 +1,19 @@
-//combined
+//class
 
-const numbers = [1, 2, 3, 4, 5];
-
-const squares = numbers.map((number) => number * number);
-console.log(squares);
-
-const cubes = numbers.map((number) => Math.pow(number, 3));
-console.log(cubes);
-
-const evn = numbers.filter((number) => number % 2 === 0);
-console.log(evn);
-
-const total = numbers.reduce((acc, number) => acc + number, 100);
-console.log(total);
+const person = {
+  firstname: "Max",
+  lastname: "Mustermann",
+  age: 25,
+  hobbies: ["Sport", "Lesen", "Reisen"],
+  address: {
+    street: "Musterstra",
+  },
+  isemployed: true,
+  greet: function () {
+    console.log("Hallo, mein Name ist " + this.firstname);
+  },
+};
+console.log(person.firstname);
+console.log(person.hobbies[1]);
+console.log(person.greet());
+console.log(person.address.street);
