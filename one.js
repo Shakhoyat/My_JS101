@@ -1,53 +1,56 @@
-//person
-class Person {
-  constructor(firstname, lastname, age) {
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.age = age;
-  }
+//destructuring = extract values from arrays and objects ,then assign them to variables in a single line of code
+//[]=to perform array destructuring
+//{}=to perform object destructuring
 
-  set firstname(first) {
-    if (typeof first === "string" && first.length > 0) {
-      this._firstname = first;
-    } else {
-      throw new Error("Invalid input.It must be a non-empty string!!!");
-    }
-  }
+//swapping values of two variables
+let a = 1;
+let b = 2;
 
-  set lastname(last) {
-    if (typeof last === "string" && last.length > 0) {
-      this._lastname = last;
-    } else {
-      throw new Error("Invalid input.It must be a non-empty string!!!");
-    }
-  }
+[a, b] = [b, a];
 
-  set age(value) {
-    if (typeof value === "number" && value > 0) {
-      this._age = value;
-    } else {
-      throw new Error("Invalid input.It must be a number!!!");
-    }
-  }
-  get firstname() {
-    return this._firstname;
-  }
+console.log(a);
+console.log(b);
+//swapping to elements of an array
+let arr = [1, 2, 3, 4];
+[arr[0], arr[1]] = [arr[1], arr[0]];
+console.log(arr);
 
-  get lastname() {
-    return this._lastname;
-  }
+//assigning elements of an array to variables
+const arr2 = [1, 2, 3, 4, 104, 110, 112];
+const [a1, b1, c1, d1, ...extra] = arr2;
+console.log(a1);
+console.log(b1);
+console.log(extra);
 
-  get age() {
-    return this._age;
-  }
-  greet() {
-    console.log(`Hello ${this.firstname} ${this.lastname}`);
-  }
+//extracting values from obj
+
+const person1 = {
+  firstname: "skt",
+  lastname: "rahman",
+  age: 39,
+  job: "Fry Cook",
+};
+const person2 = {
+  firstname: "sohan",
+  lastname: "islam",
+  age: 34,
+  job: "Army",
+};
+const { firstname, lastname, age, job } = person1;
+
+// console.log(firstname);
+// console.log(lastname);
+// console.log(age);
+// console.log(job);
+
+const { firstname: fn, lastname: ln, age: ag, jobz = "unemployed" } = person2;
+console.log(fn);
+
+//destructuring in function parameters
+function printPerson({ firstname, lastname, age, job }) {
+  console.log(firstname);
+  console.log(lastname);
+  console.log(age);
+  console.log(job);
 }
-
-const person = new Person("John", "Doe", 30);
-
-console.log(person.firstname);
-console.log(person.lastname);
-console.log(person.age);
-person.greet();
+printPerson(person1);
