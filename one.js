@@ -21,3 +21,18 @@ function half(n) {
 }
 const halves = numbers.map(half);
 console.log(halves); // [0.5, 1, 1.5, 2, 2.5]
+
+const students = ["Alice", "Bob", "Charlie", "David"];
+function toUpper(s) {
+  return s.toUpperCase();
+}
+const upperCaseStudents = students.map(toUpper);
+console.log(upperCaseStudents); // ["ALICE", "BOB", "CHARLIE", "DAVID"]
+
+const cousins = ["mou", "sohan", "saki", "rakib"];
+
+function touppercousin(str) {
+  return toUpper(str);
+}
+
+const Uppercousins = cousins.map(touppercousin);
