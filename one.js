@@ -11,3 +11,9 @@ const hello2 = (nam, age) => {
 };
 
 hello2("skt", 23);
+
+setTimeout(function () {
+  console.log("Hello");
+}, 3000);
+
+setTimeout(() => console.log("Hello after 4 seconds"), 4000);
