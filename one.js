@@ -1,15 +1,10 @@
 //filter()=creates a new array by filtering out elements
 
-let nums = [1, 2, 21, 4, 5, 6, 7, 7, 9];
+const ages = [15, 17, 16, 19, 22, 24];
 
-function isEven(element) {
-  return element % 2 === 0;
+function adultschecker(age) {
+  return age >= 18;
 }
-let evenNums = nums.filter(isEven);
-console.log(evenNums);
 
-function isOdd(element) {
-  return element % 2 !== 0;
-}
-let oddNums = nums.filter(isOdd);
-console.log(oddNums);
+const adults = ages.filter(adultschecker);
+console.log(adults);
