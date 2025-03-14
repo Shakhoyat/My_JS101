@@ -1,10 +1,10 @@
-//filter()=creates a new array by filtering out elements
+//reduce() method reduces the array to a single value
 
-const words = ["apple", "orangeeeee", "banana", "kiwi"];
+const prices = [5, 10, 15, 20, 25];
+const total = prices.reduce(sum);
 
-function getShortWords(element) {
-  return element.length <= 6;
+function sum(accumulator, currentValue) {
+  return accumulator + currentValue;
 }
-const shortwords = words.filter(getShortWords);
 
-console.log(shortwords);
+console.log(total);
