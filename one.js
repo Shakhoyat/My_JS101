@@ -1,10 +1,10 @@
 //filter()=creates a new array by filtering out elements
 
-const ages = [15, 17, 16, 19, 22, 24];
+const words = ["apple", "orangeeeee", "banana", "kiwi"];
 
-function adultschecker(age) {
-  return age >= 18;
+function getShortWords(element) {
+  return element.length <= 6;
 }
+const shortwords = words.filter(getShortWords);
 
-const adults = ages.filter(adultschecker);
-console.log(adults);
+console.log(shortwords);
