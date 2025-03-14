@@ -2,37 +2,13 @@
 // with the result of the callback function applied to each element
 // of the original array
 
-const numbers = [1, 2, 3, 4, 5];
+const dates = ["2024-1-10", "2023-04-19", "2002-03-01"];
 
-function square(n) {
-  return n * n;
-}
-const squares = numbers.map(square);
-console.log(squares); // [1, 4, 9, 16, 25]
-
-function double(n) {
-  return n * 2;
-}
-const doubles = numbers.map(double);
-console.log(doubles); // [2, 4, 6, 8, 10]
-
-function half(n) {
-  return n / 2;
-}
-const halves = numbers.map(half);
-console.log(halves); // [0.5, 1, 1.5, 2, 2.5]
-
-const students = ["Alice", "Bob", "Charlie", "David"];
-function toUpper(s) {
-  return s.toUpperCase();
-}
-const upperCaseStudents = students.map(toUpper);
-console.log(upperCaseStudents); // ["ALICE", "BOB", "CHARLIE", "DAVID"]
-
-const cousins = ["mou", "sohan", "saki", "rakib"];
-
-function touppercousin(str) {
-  return toUpper(str);
+function formatDates(element) {
+  const parts = element.split("-");
+  return `${parts[2]}/${parts[1]}/${parts[0]}`;
 }
 
-const Uppercousins = cousins.map(touppercousin);
+const formattedDates = dates.map(formatDates);
+
+console.log(formattedDates);
