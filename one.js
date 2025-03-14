@@ -1,14 +1,15 @@
-// map()=accepts a callback function and returns a new array
-// with the result of the callback function applied to each element
-// of the original array
+//filter()=creates a new array by filtering out elements
 
-const dates = ["2024-1-10", "2023-04-19", "2002-03-01"];
+let nums = [1, 2, 21, 4, 5, 6, 7, 7, 9];
 
-function formatDates(element) {
-  const parts = element.split("-");
-  return `${parts[2]}/${parts[1]}/${parts[0]}`;
+function isEven(element) {
+  return element % 2 === 0;
 }
+let evenNums = nums.filter(isEven);
+console.log(evenNums);
 
-const formattedDates = dates.map(formatDates);
-
-console.log(formattedDates);
+function isOdd(element) {
+  return element % 2 !== 0;
+}
+let oddNums = nums.filter(isOdd);
+console.log(oddNums);
