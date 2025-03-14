@@ -1,18 +1,23 @@
-let fruits = ["apple", "banana", "orange"];
+// map()=accepts a callback function and returns a new array
+// with the result of the callback function applied to each element
+// of the original array
 
-function upperCaseFruit(fruit, index, fruits) {
-  fruits[index] = fruit.toUpperCase();
-}
+const numbers = [1, 2, 3, 4, 5];
 
-function lowerCaseFruit(fruit, index, fruits) {
-  fruits[index] = fruit.toLowerCase();
+function square(n) {
+  return n * n;
 }
+const squares = numbers.map(square);
+console.log(squares); // [1, 4, 9, 16, 25]
 
-function capitalize1stLetter(fruit, index, fruits) {
-  fruits[index] = fruit.charAt(0).toUpperCase() + fruit.slice(1);
+function double(n) {
+  return n * 2;
 }
-function display(fruit) {
-  console.log(fruit);
+const doubles = numbers.map(double);
+console.log(doubles); // [2, 4, 6, 8, 10]
+
+function half(n) {
+  return n / 2;
 }
-fruits.forEach(capitalize1stLetter);
-fruits.forEach(display);
+const halves = numbers.map(half);
+console.log(halves); // [0.5, 1, 1.5, 2, 2.5]
