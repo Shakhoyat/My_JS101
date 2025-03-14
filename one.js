@@ -1,19 +1,15 @@
-//arrow functions
+//combined
 
-const hello = function () {
-  console.log("Hello");
-};
-hello();
+const numbers = [1, 2, 3, 4, 5];
 
-const hello2 = (nam, age) => {
-  console.log(`Hello ${nam} bro`);
-  console.log(`You are ${age} years old`);
-};
+const squares = numbers.map((number) => number * number);
+console.log(squares);
 
-hello2("skt", 23);
+const cubes = numbers.map((number) => Math.pow(number, 3));
+console.log(cubes);
 
-setTimeout(function () {
-  console.log("Hello");
-}, 3000);
+const evn = numbers.filter((number) => number % 2 === 0);
+console.log(evn);
 
-setTimeout(() => console.log("Hello after 4 seconds"), 4000);
+const total = numbers.reduce((acc, number) => acc + number, 100);
+console.log(total);
