@@ -1,9 +1,10 @@
-const grades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//function expression
 
-const maxGrade = grades.reduce(getMax);
+var one = function () {
+  console.log("oneeeeeee");
+};
+one();
 
-function getMax(max, grade) {
-  //ans,single element
-  return Math.max(max, grade);
-}
-console.log(maxGrade);
+setTimeout(function () {
+  console.log("timeout after 5 seconds");
+}, 5000);
