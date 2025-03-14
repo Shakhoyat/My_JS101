@@ -1,49 +1,45 @@
-// inheritance = allows a new class to inherit properties and methods from a  existing class
+//getter and  setters
 
-class animal {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
   }
-  move(speed) {
-    console.log(`${this.name} is moving with ${speed} mph`);
+
+  set width(width) {
+    if (width > 0) {
+      this._width = width;
+    } else {
+      console.log("width must be a positive number");
+    }
   }
-}
-class Rabit extends animal {
-  constructor(name, age, runspeed) {
-    super(name, age);
-    this.runspeed = runspeed;
+
+  set height(height) {
+    if (height > 0) {
+      this._height = height;
+    } else {
+      console.log("height must be a positive number");
+    }
   }
-  run() {
-    console.log(`${this.name} can run!!!!`);
-    super.move(this.runspeed);
+
+  get width() {
+    return this._width.toFixed(2);
   }
-}
-class fish extends animal {
-  constructor(name, age, swimspeed) {
-    super(name, age);
-    this.swimspeed = swimspeed;
+  get height() {
+    return this._height.toFixed(2);
   }
-  swim() {
-    console.log(`${this.name} can swim!!!!`);
-    super.move(this.swimspeed);
+
+  get area() {
+    return this._width * this._height;
   }
-}
-class hawk extends animal {
-  constructor(name, age, flyspeed) {
-    super(name, age);
-    this.flyspeed = flyspeed;
-  }
-  fly() {
-    console.log(`${this.name} can fly!!!!`);
-    super.move(this.flyspeed);
+  get perimeter() {
+    return 2 * (this._width + this._height);
   }
 }
 
-const hawk1 = new hawk("hawk1", 2, 100);
-const fish1 = new fish("fish1", 1, 10);
-const rabit1 = new Rabit("rabit1", 1, 20);
+const rectangle = new Rectangle(10, 20);
 
-rabit1.run();
-fish1.swim();
-hawk1.fly();
+console.log(rectangle.width);
+console.log(rectangle.height);
+console.log(rectangle.area);
+console.log(rectangle.perimeter);
