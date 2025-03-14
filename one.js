@@ -1,10 +1,9 @@
-//reduce() method reduces the array to a single value
+const grades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const prices = [5, 10, 15, 20, 25];
-const total = prices.reduce(sum);
+const maxGrade = grades.reduce(getMax);
 
-function sum(accumulator, currentValue) {
-  return accumulator + currentValue;
+function getMax(max, grade) {
+  //ans,single element
+  return Math.max(max, grade);
 }
-
-console.log(total);
+console.log(maxGrade);
