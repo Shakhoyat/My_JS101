@@ -1,27 +1,49 @@
 // inheritance = allows a new class to inherit properties and methods from a  existing class
 
 class animal {
-  alive = true;
-  eat() {
-    console.log(`This ${this.name} is eating!!!`);
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  sleep() {
-    console.log(`This ${this.name} is sleeping!!!`);
+  move(speed) {
+    console.log(`${this.name} is moving with ${speed} mph`);
   }
 }
 class Rabit extends animal {
-  name = "rabit";
+  constructor(name, age, runspeed) {
+    super(name, age);
+    this.runspeed = runspeed;
+  }
+  run() {
+    console.log(`${this.name} can run!!!!`);
+    super.move(this.runspeed);
+  }
 }
 class fish extends animal {
-  name = "fish";
+  constructor(name, age, swimspeed) {
+    super(name, age);
+    this.swimspeed = swimspeed;
+  }
+  swim() {
+    console.log(`${this.name} can swim!!!!`);
+    super.move(this.swimspeed);
+  }
 }
 class hawk extends animal {
-  name = "hawk";
+  constructor(name, age, flyspeed) {
+    super(name, age);
+    this.flyspeed = flyspeed;
+  }
+  fly() {
+    console.log(`${this.name} can fly!!!!`);
+    super.move(this.flyspeed);
+  }
 }
-const hawk1 = new hawk();
-hawk1.eat();
-hawk1.sleep();
 
-console.log(hawk1.alive);
-hawk1.alive = false;
-console.log(hawk1.alive);
+const hawk1 = new hawk("hawk1", 2, 100);
+const fish1 = new fish("fish1", 1, 10);
+const rabit1 = new Rabit("rabit1", 1, 20);
+
+rabit1.run();
+fish1.swim();
+hawk1.fly();
