@@ -1,45 +1,53 @@
-//getter and  setters
-
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
+//person
+class Person {
+  constructor(firstname, lastname, age) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.age = age;
   }
 
-  set width(width) {
-    if (width > 0) {
-      this._width = width;
+  set firstname(first) {
+    if (typeof first === "string" && first.length > 0) {
+      this._firstname = first;
     } else {
-      console.log("width must be a positive number");
+      throw new Error("Invalid input.It must be a non-empty string!!!");
     }
   }
 
-  set height(height) {
-    if (height > 0) {
-      this._height = height;
+  set lastname(last) {
+    if (typeof last === "string" && last.length > 0) {
+      this._lastname = last;
     } else {
-      console.log("height must be a positive number");
+      throw new Error("Invalid input.It must be a non-empty string!!!");
     }
   }
 
-  get width() {
-    return this._width.toFixed(2);
+  set age(value) {
+    if (typeof value === "number" && value > 0) {
+      this._age = value;
+    } else {
+      throw new Error("Invalid input.It must be a number!!!");
+    }
   }
-  get height() {
-    return this._height.toFixed(2);
+  get firstname() {
+    return this._firstname;
   }
 
-  get area() {
-    return this._width * this._height;
+  get lastname() {
+    return this._lastname;
   }
-  get perimeter() {
-    return 2 * (this._width + this._height);
+
+  get age() {
+    return this._age;
+  }
+  greet() {
+    console.log(`Hello ${this.firstname} ${this.lastname}`);
   }
 }
 
-const rectangle = new Rectangle(10, 20);
+const person = new Person("John", "Doe", 30);
 
-console.log(rectangle.width);
-console.log(rectangle.height);
-console.log(rectangle.area);
-console.log(rectangle.perimeter);
+console.log(person.firstname);
+console.log(person.lastname);
+console.log(person.age);
+person.greet();
