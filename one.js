@@ -19,10 +19,8 @@ const evenNum = numbers.filter(function (n) {
 console.log(evenNum);
 
 //output: [2, 4]
-const totalEven = numbers.reduce(function (acc, n) {
-  if (n % 2 === 0) {
-    return acc + n;
-  }
-  return acc;
-}, 0);
-console.log(totalEven);
+const total = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+});
+console.log(total);
+//output: 15
