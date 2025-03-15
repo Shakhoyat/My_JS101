@@ -1,22 +1,17 @@
-//date objects in js
+//closure =a function that has access to the outer function scope even after the outer function has returned
+//closure is a way to access the outer function scope from an inner function
 
-const date = new Date();
-const year = date.getFullYear();
-const month = date.getMonth();
-const day = date.getDate();
-const hours = date.getHours();
-const minutes = date.getMinutes();
-const seconds = date.getSeconds();
-const milliseconds = date.getMilliseconds();
-const dayOfWeek = date.getDay();
-const time = date.getTime();
+function outer() {
+  //the variables are now in the closure scope and acting as private variables
+  let outerVar = "I am the outer var";
+  function inner() {
+    let innerVar = "I am the inner var";
+    console.log(outerVar);
+    console.log(innerVar);
+  }
+  inner();
+}
 
-console.log(year);
-console.log(month);
-console.log(day);
-console.log(hours);
-console.log(minutes);
-console.log(seconds);
-console.log(milliseconds);
-console.log(dayOfWeek);
-console.log(time);
+outerVar = "Im the new outer var brooo!!!";
+// console.log(innerVar); //error
+outer();
