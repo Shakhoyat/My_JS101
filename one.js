@@ -1,19 +1,22 @@
-//shuffling an array
+//date objects in js
 
-const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const milliseconds = date.getMilliseconds();
+const dayOfWeek = date.getDay();
+const time = date.getTime();
 
-cards.sort(() => Math.random() - 0.5); //inefficient
-
-console.log(cards);
-
-//fisher yates shuffle algorithm
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
-
-    [array[i], array[j]] = [array[j], array[i]]; // swap elements
-  }
-}
-
-shuffle(cards);
+console.log(year);
+console.log(month);
+console.log(day);
+console.log(hours);
+console.log(minutes);
+console.log(seconds);
+console.log(milliseconds);
+console.log(dayOfWeek);
+console.log(time);
