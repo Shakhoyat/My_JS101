@@ -14,3 +14,11 @@ const people = [
 ];
 people.sort((a, b) => a.cgpa - b.cgpa);
 console.log(people);
+
+//sorting string within object
+
+people.sort((a, b) => a.name.localeCompare(b.name)); //ascending order
+console.log(people);
+
+people.sort((a, b) => b.name.localeCompare(a.name)); //ascending order
+console.log(people);
