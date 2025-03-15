@@ -1,17 +1,27 @@
 //closure =a function that has access to the outer function scope even after the outer function has returned
 //closure is a way to access the outer function scope from an inner function
+//closure maintains state...its kind of works like a class-object
 
-function outer() {
-  //the variables are now in the closure scope and acting as private variables
-  let outerVar = "I am the outer var";
-  function inner() {
-    let innerVar = "I am the inner var";
-    console.log(outerVar);
-    console.log(innerVar);
+function cnter() {
+  let cnt = 0;
+  function increment() {
+    cnt++;
+    console.log(`The count increased to ${cnt}`);
   }
-  inner();
+  function getCount() {
+    return cnt;
+  }
+  return { increment, getCount };
 }
 
-outerVar = "Im the new outer var brooo!!!";
-// console.log(innerVar); //error
-outer();
+// cnt(); //The count increased to 1
+
+const mycnt = cnter();
+mycnt.increment(); //The count increased to 1
+mycnt.increment(); //The count increased to 1
+mycnt.increment(); //The count increased to 1
+
+// cnt.cnt = 100;
+// console.log(cnter.cnt); //100
+
+console.log(`The count is ${mycnt.getCount()}`); //The count is 3
