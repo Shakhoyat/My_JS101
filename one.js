@@ -1,24 +1,19 @@
-//sort method in js
+//shuffling an array
 
-let fruits = ["apple", "orange", "coconut", "pineapple", "banana"];
+const cards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"];
 
-let numbers = [1, 2, 93, 4, 15, 61, 7, 8, 9, 10];
-// console.log(fruits.sort());
-console.log(numbers.sort((a, b) => a - b)); //ascending order
-console.log(numbers.sort((a, b) => b - a)); //descending order
+cards.sort(() => Math.random() - 0.5); //inefficient
 
-const people = [
-  { name: "John", age: 30, cgpa: 3.5 },
-  { name: "Jane", age: 25, cgpa: 3.7 },
-  { name: "Jim", age: 40, cgpa: 3.91 },
-];
-people.sort((a, b) => a.cgpa - b.cgpa);
-console.log(people);
+console.log(cards);
 
-//sorting string within object
+//fisher yates shuffle algorithm
 
-people.sort((a, b) => a.name.localeCompare(b.name)); //ascending order
-console.log(people);
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
 
-people.sort((a, b) => b.name.localeCompare(a.name)); //ascending order
-console.log(people);
+    [array[i], array[j]] = [array[j], array[i]]; // swap elements
+  }
+}
+
+shuffle(cards);
