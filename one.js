@@ -1,10 +1,21 @@
-//querySelectorAll('div') returns a NodeList
-// NodeList is an array-like object and its static
+//**************firstelementchild**************
 
-const veges = document.querySelectorAll("li");
+// const fruits = document.getElementById("fruits");
 
-console.log(veges); // NodeList(3) [li, li, li]
+// const firstElementChild = fruits.firstElementChild;
 
-veges.forEach((vege) => {
-  vege.style.backgroundColor = "green";
+// firstElementChild.style.backgroundColor = "yellow";
+
+const ulElements = document.querySelectorAll("ul");
+ulElements.forEach((element) => {
+  const firstChild = element.firstElementChild;
+  if (firstChild) {
+    firstChild.style.backgroundColor = "green";
+  }
 });
+
+//************lastelementchild**********
+
+const lastElementChild = fruits.lastElementChild;
+
+lastElementChild.style.backgroundColor = "pink";
