@@ -19,3 +19,5 @@ ulElements.forEach((element) => {
 const lastElementChild = fruits.lastElementChild;
 
 lastElementChild.style.backgroundColor = "pink";
+
+//******nextElementSibling*********** */
