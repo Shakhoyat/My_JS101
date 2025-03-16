@@ -1,18 +1,20 @@
-//html collection
-const fruits = document.getElementsByClassName("fruits");
+//getElement by TagName()
 
-fruits[0].style.color = "red";
-fruits[1].style.color = "green";
-fruits[2].style.color = "blue";
+const h4Element = document.getElementsByTagName("h4");
+const liElements = document.getElementsByTagName("li");
 
-fruits[0].style.backgroundColor = "black";
+console.log(h4Element);
 
-// for (let fruit of fruits) {
-//   fruit.style.backgroundColor = "yellow";
-// }
+h4Element[1].style.color = "red";
 
-//ForEach() method dont work on html collection so we have to convert it into array
+for (let i = 0; i < h4Element.length; i++) {
+  h4Element[i].style.backgroundColor = "yellow";
+}
 
-Array.from(fruits).forEach((fruit) => {
-  fruit.style.backgroundColor = "yellow";
+for (let lielement of liElements) {
+  lielement.style.backgroundColor = "lightgreen";
+}
+
+Array.from(liElements).forEach((element) => {
+  element.style.color = "blue";
 });
