@@ -1,9 +1,5 @@
-//try-catch-finally
-try {
-  console.lag("try");
-} catch (e) {
-  console.error(e);
-} finally {
-  console.log("finally");
-}
-console.log("You've reached to the end of the code");
+//DOM & element selectors
+const myheading = document.getElementById("my-heading");
+myheading.style.color = "red";
+myheading.style.backgroundColor = "black";
+console.log(myheading);
