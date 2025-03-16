@@ -1,5 +1,10 @@
-//querrySelector() is used to select the first element that matches the specified selector(s).
+//querySelectorAll('div') returns a NodeList
+// NodeList is an array-like object and its static
 
-const element = document.querySelector(".fruits");
+const veges = document.querySelectorAll("li");
 
-element.style.color = "red";
+console.log(veges); // NodeList(3) [li, li, li]
+
+veges.forEach((vege) => {
+  vege.style.backgroundColor = "green";
+});
