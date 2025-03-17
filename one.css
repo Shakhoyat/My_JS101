@@ -1,7 +1,4 @@
-.box{
-    width: auto;
-    height: auto;
-    background-color: white;
-    border: 3px solid;
-    margin: auto;
+#fruits{
+    border: 3px solid red;
+    font-size: 2rem;
 }
