@@ -12,8 +12,12 @@ newListItem.style.fontWeight = "bold";
 // document.body.append(newListItem);
 // document.body.prepend(newListItem);
 // document.getElementById("fruits").prepend(newListItem);
+document.getElementById("fruits").append(newListItem);
+// const orange = document.getElementById("orange");
+// document.getElementById("fruits").insertBefore(newListItem, orange);
 
-const orange = document.getElementById("orange");
-document.getElementById("fruits").insertBefore(newListItem, orange);
+// const listItems = document.querySelectorAll("#fruits li");
+// document.getElementById("fruits").insertBefore(newListItem, listItems[4]);
 
 //remove the element
+document.getElementById("fruits").removeChild(newListItem);
