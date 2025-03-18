@@ -1,23 +1,33 @@
-//step 1 CREATE THE ELEMENT
-const newListItem = document.createElement("li");
+//eventListener = Listen for specific events to create interactivity
+//.addEventListener(event,callback)
 
-//step 2 ADD attributes/properties to the  CONTENT
-newListItem.textContent = "coconut";
-newListItem.id = "coconut";
-newListItem.style.backgroundColor = "lightgreen";
-newListItem.style.fontSize = "20px";
-newListItem.style.fontWeight = "bold";
+const mybox = document.getElementById("mybox");
 
-//step 3 APPEND THE ELEMENT TO THE DOM
-// document.body.append(newListItem);
-// document.body.prepend(newListItem);
-// document.getElementById("fruits").prepend(newListItem);
-document.getElementById("fruits").append(newListItem);
-// const orange = document.getElementById("orange");
-// document.getElementById("fruits").insertBefore(newListItem, orange);
+const mybtn = document.getElementById("mybtn");
+// function changeColor(event) {
+//   event.target.style.backgroundColor = "tomato";
+//   event.target.textContent = "ouch!!!";
+// }
 
-// const listItems = document.querySelectorAll("#fruits li");
-// document.getElementById("fruits").insertBefore(newListItem, listItems[4]);
+// mybox.addEventListener("click", changeColor);
+//or
+// mybox.addEventListener("click", function (event) {
+//   event.target.style.backgroundColor = "tomato";
+//   event.target.textContent = "ouch!!!";
+// });
 
-//remove the element
-document.getElementById("fruits").removeChild(newListItem);
+// OR
+
+mybtn.addEventListener("click", (event) => {
+  event.target.style.backgroundColor = "tomato";
+  event.target.textContent = "ouch!!!";
+});
+
+mybox.addEventListener("mouseover", (event) => {
+  event.target.style.backgroundColor = "yellow";
+  event.target.textContent = "dont do itttt!!!";
+});
+mybox.addEventListener("mouseout", (event) => {
+  event.target.style.backgroundColor = "lightgreen";
+  event.target.textContent = "oh gosh!!!";
+});
