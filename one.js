@@ -1,40 +1,37 @@
-//callback hell
-function task1(callback) {
-  setTimeout(() => {
-    console.log("Task 1 Complete");
-    callback();
-  }, 2000);
-}
-function task2(callback) {
-  setTimeout(() => {
-    console.log("Task 2 Complete");
-    callback();
-  }, 2000);
-}
-function task3(callback) {
-  setTimeout(() => {
-    console.log("Task 3 Complete....!!!!");
-    callback();
-  }, 2000);
-}
-function task4(callback) {
-  setTimeout(() => {
-    console.log("Task 4 Complete");
-    callback();
-  }, 2000);
-}
-function task5(callback) {
-  setTimeout(() => {
-    console.log("Task 5 Complete.");
-    callback();
-  }, 2000);
-}
-task1(() => {
-  task2(() => {
-    task3(() => {
-      task4(() => {
-        task5(() => console.log("All tasks are completed"));
-      });
-    });
+//new Promise((resolve, reject) => {asynchronous code here})
+
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("walked the dog");
+    }, 1500);
   });
-});
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("cleaned the kitchen");
+    }, 1000);
+  });
+}
+function takeoutTrash() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("took out the trash");
+    }, 500);
+  });
+}
+walkDog()
+  .then((value) => {
+    console.log(value);
+    return cleanKitchen();
+  })
+  .then((value) => {
+    console.log(value);
+    return takeoutTrash();
+  })
+  .then((value) => {
+    console.log(value);
+    console.log("finished all the chores!!!");
+  });
