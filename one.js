@@ -1,9 +1,15 @@
-//new Promise((resolve, reject) => {asynchronous code here})
+//Async => makes a function return a promise
+//Await => makes an async function wait for a promise
 
 function walkDog() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("walked the dog");
+      const dogwalked = true;
+      if (dogwalked) {
+        resolve("walked the dog");
+      } else {
+        reject("You didn't walk the dog");
+      }
     }, 1500);
   });
 }
@@ -11,27 +17,37 @@ function walkDog() {
 function cleanKitchen() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("cleaned the kitchen");
+      const kitchenCleaned = true;
+      if (kitchenCleaned) {
+        resolve("cleaned the kitchen");
+      } else {
+        reject("You didn't clean the kitchen");
+      }
     }, 1000);
   });
 }
+
 function takeoutTrash() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("took out the trash");
+      const trashTakenOut = true;
+      if (trashTakenOut) {
+        resolve("took out the trash");
+      } else {
+        reject("You didn't take out the trash");
+      }
     }, 500);
   });
 }
-walkDog()
-  .then((value) => {
-    console.log(value);
-    return cleanKitchen();
-  })
-  .then((value) => {
-    console.log(value);
-    return takeoutTrash();
-  })
-  .then((value) => {
-    console.log(value);
-    console.log("finished all the chores!!!");
-  });
+
+async function doChores() {
+  const walkDogResult = await walkDog();
+  console.log(walkDogResult);
+  const cleanKitchenResult = await cleanKitchen();
+  console.log(cleanKitchenResult);
+  const takeoutTrashResult = await takeoutTrash();
+  console.log(takeoutTrashResult);
+
+  console.log("finished all the chores!!!");
+}
+doChores();
