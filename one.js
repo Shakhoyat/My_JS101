@@ -1,38 +1,40 @@
-//image slider
-
-const slides = document.querySelectorAll(".slides img");
-let slide_idx = 0;
-let interval_id = null;
-
-// initializeSlider();
-
-document.addEventListener("DOMContentLoaded", initializeSlider); //prefered way to call a function when the page is loaded
-
-function initializeSlider() {
-  if (slides.length > 0) {
-    slides[slide_idx].classList.add("displaySlide");
-    interval_id = setInterval(nextSlide, 4000);
-  }
-  //   console.log(interval_id);
+//callback hell
+function task1(callback) {
+  setTimeout(() => {
+    console.log("Task 1 Complete");
+    callback();
+  }, 2000);
 }
-
-function showSlide(idx) {
-  if (idx >= slides.length) {
-    slide_idx = 0;
-  } else if (idx < 0) {
-    slide_idx = slides.length - 1;
-  }
-  slides.forEach((slide) => {
-    slide.classList.remove("displaySlide");
+function task2(callback) {
+  setTimeout(() => {
+    console.log("Task 2 Complete");
+    callback();
+  }, 2000);
+}
+function task3(callback) {
+  setTimeout(() => {
+    console.log("Task 3 Complete....!!!!");
+    callback();
+  }, 2000);
+}
+function task4(callback) {
+  setTimeout(() => {
+    console.log("Task 4 Complete");
+    callback();
+  }, 2000);
+}
+function task5(callback) {
+  setTimeout(() => {
+    console.log("Task 5 Complete.");
+    callback();
+  }, 2000);
+}
+task1(() => {
+  task2(() => {
+    task3(() => {
+      task4(() => {
+        task5(() => console.log("All tasks are completed"));
+      });
+    });
   });
-  slides[slide_idx].classList.add("displaySlide");
-}
-function nextSlide() {
-  slide_idx++;
-  showSlide(slide_idx);
-}
-function prevSlide() {
-  clearInterval(interval_id);
-  slide_idx--;
-  showSlide(slide_idx);
-}
+});
