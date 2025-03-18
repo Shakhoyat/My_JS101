@@ -1,8 +1,11 @@
 const mybtn = document.getElementById("mybtn");
 
-mybtn.addEventListener("mouseover", (event) => {
-  event.target.classList.toggle("hover");
-});
-mybtn.addEventListener("mouseout", (event) => {
-  event.target.classList.toggle("hover");
+mybtn.classList.add("enabled");
+
+mybtn.addEventListener("click", (event) => {
+  if (event.target.classList.contains("disabled")) {
+    event.target.textContent += ":)";
+  } else {
+    event.target.classList.replace("enabled", "disabled");
+  }
 });
