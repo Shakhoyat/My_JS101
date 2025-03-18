@@ -1,22 +1,15 @@
-const mybtn = document.getElementById("mybtn");
+//image slider
 
-const myh1 = document.getElementById("myh1");
+const slides = document.querySelectorAll(".slides img");
+let slide_idx = 0;
+let interval_id = null;
 
-mybtn.classList.add("enabled");
-myh1.classList.add("enabled");
+initializeSlider();
 
-myh1.addEventListener("click", (event) => {
-  if (event.target.classList.contains("disabled")) {
-    event.target.textContent += ":)";
-  } else {
-    event.target.classList.replace("enabled", "disabled");
-  }
-});
+function initializeSlider() {
+  slides[slide_idx].classList.add("displaySlide");
+}
 
-mybtn.addEventListener("click", (event) => {
-  if (event.target.classList.contains("disabled")) {
-    event.target.textContent += ":)";
-  } else {
-    event.target.classList.replace("enabled", "disabled");
-  }
-});
+function showSlide() {}
+function NextSlide() {}
+function PrevSlide() {}
