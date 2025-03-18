@@ -11,3 +11,10 @@ console.log(buttons);
 
 buttons = document.querySelectorAll(".mybtn");
 console.log(buttons);
+//remove an element
+
+buttons.forEach((buttons) => {
+  buttons.addEventListener("click", (event) => {
+    event.target.remove();
+  });
+});
