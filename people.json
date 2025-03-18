@@ -1,0 +1,30 @@
+[
+    {
+        "name": "John Doe",
+        "age": 30,
+        "email": "john@gmail.com",
+        "isEmployed": true,
+        "hobbies": ["reading", "travelling"]
+    },
+    {
+        "name": "Jane Smith",
+        "age": 25,
+        "email": "jane@gmail.com",
+        "isEmployed": false,
+        "hobbies": ["painting", "cycling"]
+    },
+    {
+        "name": "Alice Johnson",
+        "age": 28,
+        "email": "alice@gmail.com",
+        "isEmployed": true,
+        "hobbies": ["cooking", "hiking"]
+    },
+    {
+        "name": "Bob Brown",
+        "age": 35,
+        "email": "bob@gmail.com",
+        "isEmployed": false,
+        "hobbies": ["gaming", "photography"]
+    }
+]

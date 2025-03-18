@@ -1,0 +1,7 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "email": "john@gmail.com",
+    "isEmployed": true,
+    "hobbies":["reading", "travelling"]
+}
