@@ -1,9 +1,19 @@
-.mybtn{
+#mybtn{
     font-size: 4rem;
     margin:10px;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     background-color: aquamarine;
+
+}
+.enabled{
+    color: white;
+    background-color: tomato;
+}
+.hover{
+    box-shadow:crimson;
+    font-weight: bold  ;
+    
 
 }

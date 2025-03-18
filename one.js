@@ -1,20 +1,10 @@
-//NodeLists = static collection of html elements by (id,class,element)
-let buttons = document.querySelectorAll(".mybtn");
+//ClassLists
+const mybtn = document.getElementById("mybtn");
+//Add class
+mybtn.classList.add("enabled");
 
-//add an element
-const newButton = document.createElement("button");
-newButton.textContent = "Button5";
-newButton.classList = "mybtn";
-document.body.appendChild(newButton);
+mybtn.classList.add("hover");
 
-console.log(buttons);
-
-buttons = document.querySelectorAll(".mybtn");
-console.log(buttons);
-//remove an element
-
-buttons.forEach((buttons) => {
-  buttons.addEventListener("click", (event) => {
-    event.target.remove();
-  });
-});
+//Remove class
+mybtn.classList.remove("enabled");
+//Toggle class
