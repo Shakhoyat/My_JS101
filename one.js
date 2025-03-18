@@ -1,12 +1,8 @@
-const mybtn = document.getElementById("mybtn");
-const myimg = document.getElementById("myimg");
+//NodeLists = static collection of html elements by (id,class,element)
+let buttons = document.querySelectorAll(".mybtn");
 
-mybtn.addEventListener("click", (event) => {
-  if (myimg.style.visibility === "hidden") {
-    myimg.style.visibility = "visible";
-    mybtn.textContent = "Show";
-  } else {
-    myimg.style.visibility = "hidden";
-    mybtn.textContent = "Show";
-  }
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.target.style.backgroundColor = "tomato";
+  });
 });
