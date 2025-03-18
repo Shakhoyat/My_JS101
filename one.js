@@ -1,3 +1,5 @@
+fetchData();
+
 async function fetchData() {
   try {
     const pokemonName = document
@@ -19,4 +21,3 @@ async function fetchData() {
     console.error(error);
   }
 }
-fetchData();
