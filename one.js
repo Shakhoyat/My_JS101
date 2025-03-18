@@ -1,13 +1,13 @@
 //NodeLists = static collection of html elements by (id,class,element)
 let buttons = document.querySelectorAll(".mybtn");
 
-//mouseover + mouseout event listener
+//add an element
+const newButton = document.createElement("button");
+newButton.textContent = "Button5";
+newButton.classList = "mybtn";
+document.body.appendChild(newButton);
 
-buttons.forEach((button) => {
-  button.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = "yellow";
-  });
-  button.addEventListener("mouseout", (event) => {
-    event.target.style.backgroundColor = "purple";
-  });
-});
+console.log(buttons);
+
+buttons = document.querySelectorAll(".mybtn");
+console.log(buttons);
