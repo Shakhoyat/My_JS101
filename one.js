@@ -1,3 +1,4 @@
+console.log("So My JS 101 course is  at its end !!!!");
 fetchData();
 
 async function fetchData() {
